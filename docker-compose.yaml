@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: ecommerce_mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: ecommerce_rabbitmq
+    ports:
+      - "5672:5672"   # For our Node.js apps
+      - "15672:15672" # For the Management Dashboard (User: guest, Pass: guest)
+
+volumes:
+  mongo_data:
