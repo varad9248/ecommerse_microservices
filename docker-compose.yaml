@@ -13,8 +13,8 @@ services:
     image: rabbitmq:3-management
     container_name: ecommerce_rabbitmq
     ports:
-      - "5672:5672"   # For our Node.js apps
-      - "15672:15672" # For the Management Dashboard (User: guest, Pass: guest)
+      - "5672:5672"   
+      - "15672:15672" 
 
 volumes:
   mongo_data:

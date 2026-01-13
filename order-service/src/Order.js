@@ -1,12 +1,12 @@
 import mongoose from "mongoose";
 
 const OrderSchema = new mongoose.Schema({
-  userEmail: String, // Capital S
+  userEmail: String, 
   status: {
     type: String,
-    default: "PENDING" // You nailed this part
+    default: "PENDING" 
   },
-  totalPrice: Number, // Capital N
+  totalPrice: Number, 
   items: [
     {
       productId: String,
